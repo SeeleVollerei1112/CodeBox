@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gy.ssm.dao.BookMapper">
+    <!--根据id查询图书信息 -->
+    <select id="findBookById" parameterType="int"
+        resultType="com.gy.ssm.entity.Book">
+        select * from book where id = #{id}
+    </select>
+    <select id="findAllBooks" resultType="com.gy.ssm.entity.Book">
+        select * from book
+    </select>
+    <insert id="addBook" parameterType="com.gy.ssm.entity.Book">
+        <selectKey keyProperty="id"
+            resultType="Integer"
+            order="BEFORE"
+            statementType="PREPARED">
+            select if(max(id) is null, 1, max(id) + 1) from book
+        </selectKey>
+        insert into book(id, name, author, press) values(#{id}, #{name}, #{author}, #{press})
+    </insert>
+</mapper>

@@ -1,0 +1,5 @@
+###
+POST http://localhost:8080/spring_mvc_demo_war/hello/hello
+
+###
+GET http://localhost:8080/spring_mvc_demo_war/hello/hello
