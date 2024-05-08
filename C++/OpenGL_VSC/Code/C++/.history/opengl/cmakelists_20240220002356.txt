@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.27) # 指定CMake的最低版本要求
+
+project(HelloWindow VERSION 1.0) # 项目名称及版本
+set(CMAKE_CXX_STANDARD 17) # 设置C++标准
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# 添加可执行文件
+add_executable(hello_window main.cpp) # 假设你的源文件名为main.cpp
+
+# 包含的头文件目录
+include_directories(D:/OneDrive/Code/OpenGL/Include)
+
+# 外部库的路径
+link_directories(D:/OneDrive/Code/OpenGL/Libs)
+
+# 链接外部库到你的可执行文件
+target_link_libraries(hello_window glfw3.lib opengl32.lib)
+
+# 如果你的项目中还用到了GLAD，并且GLAD是作为源文件一部分包含在项目中（而不是作为预编译的库），
+# 你需要确保GLAD的源文件也被编译。例如，如果GLAD的源码位于项目的`src/glad.c`，则可以这样添加：
+add_executable(hello_window main.cpp src/glad.c)
+# 注意：这要求你的项目结构中包含了GLAD的源文件。

@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "1.2.hello_window_clear"
+    },
+    {
+      "path": "2.2.hello_triangle"
+    }
+  ],
+  "settings": {
+    "C_Cpp.default.compilerPath": "F:\\MinGW-W64\\13.2.0-rev3\\bin\\g++.exe",
+    "commentTranslate.hover.enabled": true,
+    "commentTranslate.targetLanguage": "zh-CN",
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "files.associations": {
+      "ostream": "cpp"
+    }
+  }
+}

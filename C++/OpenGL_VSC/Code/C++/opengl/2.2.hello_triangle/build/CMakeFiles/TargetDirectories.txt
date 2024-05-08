@@ -1,0 +1,3 @@
+D:/OneDrive/Code/C++/opengl/2.2.hello_triangle/build/CMakeFiles/HelloTriangle.dir
+D:/OneDrive/Code/C++/opengl/2.2.hello_triangle/build/CMakeFiles/edit_cache.dir
+D:/OneDrive/Code/C++/opengl/2.2.hello_triangle/build/CMakeFiles/rebuild_cache.dir

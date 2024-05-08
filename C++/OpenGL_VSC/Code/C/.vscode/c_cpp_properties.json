@@ -1,0 +1,40 @@
+
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceRoot}",
+                "F:/MinGW/mingw64/include/**",
+                "F:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++",
+                "F:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32",
+                "F:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/backward",
+                "F:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include",
+                "F:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed",
+                "F:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "__GNUC__=12",
+                "__cdecl=__attribute__((__cdecl__))"
+            ],
+            "intelliSenseMode": "windows-gcc-x64",
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "",
+                "path": [
+                "${workspaceRoot}",
+                "F:/MinGW/mingw64/include/**",
+                "F:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++",
+                "F:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32",
+                "F:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/backward",
+                "F:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include",
+                "F:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed",
+                "F:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/include"
+                ]
+            }
+        }
+    ],
+    "version": 4
+}
