@@ -1,5 +1,6 @@
 package com.gy.cbl.config;
 
+import com.github.pagehelper.PageInterceptor;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -12,6 +13,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
+import java.util.Properties;
 
 @EnableTransactionManagement
 @PropertySource(value = {"classpath:application.properties"})
@@ -45,6 +47,16 @@ public class DBConfig {
         return ds;
     }
 
+    /**配置PageInterceptor分页插件*/
+    @Bean
+    public PageInterceptor pageInterceptor() {
+        PageInterceptor pageIntercptor = new PageInterceptor();
+        Properties properties = new Properties();
+        properties.setProperty("value", "true");
+        pageIntercptor.setProperties(properties);
+        return pageIntercptor;
+    }
+
     /**
      * 配置MyBatis的SqlSessionFactory
      */
@@ -52,6 +64,7 @@ public class DBConfig {
     public SqlSessionFactory sqlSessionFactory() throws Exception {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(poolDataSource());
+        factoryBean.setPlugins(pageInterceptor());
         return factoryBean.getObject();
     }
 

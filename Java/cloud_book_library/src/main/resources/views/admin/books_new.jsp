@@ -68,6 +68,6 @@
 </div>
 <!-- 数据展示内容区/ -->
 <%--引入存放模态窗口的页面--%>
-<jsp:include page="/admin/book_modal.jsp"></jsp:include>
+<jsp:include page="book_modal.jsp"></jsp:include>
 </body>
 </html>

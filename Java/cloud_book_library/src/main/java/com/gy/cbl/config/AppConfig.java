@@ -1,6 +1,9 @@
 package com.gy.cbl.config;
 
+import org.jasypt.util.password.PasswordEncryptor;
+import org.jasypt.util.password.StrongPasswordEncryptor;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -22,4 +25,9 @@ public class AppConfig {
         configurer.setBasePackage("com.gy.ssm.dao");
         return configurer;
     }*/
+
+    @Bean
+    PasswordEncryptor passwordEncryptor() {
+        return new StrongPasswordEncryptor();
+    }
 }

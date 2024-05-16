@@ -21,7 +21,7 @@ public class SpringWebAppInitializer extends AbstractAnnotationConfigDispatcherS
      */
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[] { com.gy.cbl.config.AppConfig.class };
+        return new Class[] { AppConfig.class };
     }
 
     /**
@@ -57,5 +57,4 @@ public class SpringWebAppInitializer extends AbstractAnnotationConfigDispatcherS
         // 配置上传文件相关的选项，至少配置location
         registration.setMultipartConfig(new MultipartConfigElement("d:/temp"));
     }
-
 }

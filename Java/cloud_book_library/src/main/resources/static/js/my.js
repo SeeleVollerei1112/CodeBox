@@ -24,7 +24,7 @@ function cg() {
 }
 //点击借阅图书时执行
 function borrow() {
-    var url =getProjectPath()+ "/book/borrowBook";
+    var url =getProjectPath()+ "/book/borrow";
     $.post(url, $("#borrowBook").serialize(), function (response) {
         alert(response.message)
         if (response.success == true) {
@@ -52,7 +52,8 @@ function resetStyle() {
 //查询id对应的图书信息，并将图书信息回显到编辑或借阅的窗口中
 function findBookById(id,doname) {
     resetStyle()
-    var url = getProjectPath()+"/book/findById?id=" + id;
+    // 根据id获取指定的book
+    var url = getProjectPath()+"/book/" + id;
     $.get(url, function (response) {
         //如果是编辑图书，将获取的图书信息回显到编辑的窗口中
         if(doname=='edit'){
@@ -61,7 +62,7 @@ function findBookById(id,doname) {
             $("#ebisbn").val(response.data.isbn);
             $("#ebpress").val(response.data.press);
             $("#ebauthor").val(response.data.author);
-            $("#ebpagination").val(response.data.pagination);
+            $("#ebpagination").val(response.data.pageCount);
             $("#ebprice").val(response.data.price);
             $("#ebstatus").val(response.data.status);
         }
@@ -74,7 +75,7 @@ function findBookById(id,doname) {
             $("#bisbn").val(response.data.isbn);
             $("#bpress").val(response.data.press);
             $("#bauthor").val(response.data.author);
-            $("#bpagination").val(response.data.pagination);
+            $("#bpagination").val(response.data.pageCount);
         }
     })
 }

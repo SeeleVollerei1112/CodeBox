@@ -5,4 +5,3 @@ import com.gy.cbl.entity.User;
 public interface UserMapper {
     User findByEmail(String email);
 }
-

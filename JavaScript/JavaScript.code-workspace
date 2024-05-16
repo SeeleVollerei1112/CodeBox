@@ -1,10 +1,10 @@
 {
   "folders": [
     {
-      "path": "."
+      "path": "React/quick-start"
     },
     {
-      "path": "React/quick-start"
+      "path": "React/my-app"
     }
   ],
   "settings": {}

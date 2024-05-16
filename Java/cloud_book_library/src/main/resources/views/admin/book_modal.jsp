@@ -25,7 +25,7 @@
                         </tr>
                         <tr>
                             <td>书籍页数</td>
-                            <td><input class="form-control" readonly name="pagination" id="bpagination"></td>
+                            <td><input class="form-control" readonly name="pageCount" id="bpagination"></td>
                             <td>归还时间<br/><span style="color: red">*</span></td>
                             <%--时间控件中的内容改变时，调用js文件中的cg()方法--%>
                             <td><input class="form-control" type="date" name="returnTime" id="time" onchange="cg()">

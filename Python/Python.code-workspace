@@ -4,5 +4,8 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"terminal.integrated.cursorBlinking": true,
+		"terminal.integrated.smoothScrolling": true
+	}
 }

@@ -56,6 +56,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/main").setViewName("admin/main");
     }
 
     /**
@@ -102,6 +103,4 @@ public class WebMvcConfig implements WebMvcConfigurer {
         localValidatorFactoryBean.setValidationMessageSource(messageSource());
         return localValidatorFactoryBean;
     }
-
-
 }

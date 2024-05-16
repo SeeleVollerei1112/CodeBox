@@ -24,7 +24,7 @@
     <!-- 页面头部 -->
     <header class="main-header">
         <!-- Logo -->
-        <a href="${pageContext.request.contextPath}/admin/main.jsp" class="logo">
+        <a href="${pageContext.request.contextPath}/main" class="logo">
             <span class="logo-lg"><b>云借阅-图书管理系统</b></span>
         </a>
         <!-- 头部导航 -->
@@ -35,7 +35,7 @@
                         <a>
                             <img src="${pageContext.request.contextPath}/img/user.jpg" class="user-image"
                                  alt="User Image">
-                            <span class="hidden-xs">${USER_SESSION.name}</span>
+                            <span class="hidden-xs">${user.name}</span>
                         </a>
                     </li>
                     <li class="dropdown user user-menu">
@@ -84,7 +84,7 @@
     <!-- 内容展示区域 -->
     <div class="content-wrapper">
         <iframe width="100%" id="iframe" name="iframe" onload="SetIFrameHeight()"
-                frameborder="0" src="${pageContext.request.contextPath}/book/selectNewbooks"></iframe>
+                frameborder="0" src="${pageContext.request.contextPath}/book/new"></iframe>
     </div>
 </div>
 </body>

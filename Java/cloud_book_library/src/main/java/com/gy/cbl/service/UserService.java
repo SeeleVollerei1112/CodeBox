@@ -6,4 +6,3 @@ import com.gy.cbl.entity.User;
 public interface UserService {
     User login(LoginRequest loginRequest);
 }
-

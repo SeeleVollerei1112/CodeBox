@@ -4,33 +4,34 @@ USE `cloud_book_library`;
 
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user`  (
-                         `id` int(32) NOT NULL AUTO_INCREMENT,
-                         `name` varchar(32),
-                         `password` varchar(32),
-                         `email` varchar(32),
-                         `role` varchar(32),
-                         `status` varchar(1),
-                         PRIMARY KEY (`id`) USING BTREE
+    `id` int(32) NOT NULL AUTO_INCREMENT,
+    `name` varchar(32),
+    `password` varchar(256),
+    `email` varchar(32),
+    `role` varchar(32),
+    `status` varchar(1),
+    PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 
-INSERT INTO `user` VALUES (1, '黑马程序员', '', 'itheima@itcast.cn', 'ADMIN', '0');
-INSERT INTO `user` VALUES (2, '张三', '', 'zhangsan@itcast.cn', 'USER', '0');
+# password:123456
+INSERT INTO `user` VALUES (1, '黑马程序员', 'mO84eHS6BvXVoblfwAcHMZW1EPkZ7J8bOoPB8Q7i7Ybvg8kILcgLdGEM03+dSNei', 'itheima@itcast.cn', 'ADMIN', '0');
+INSERT INTO `user` VALUES (2, '张三', 'mO84eHS6BvXVoblfwAcHMZW1EPkZ7J8bOoPB8Q7i7Ybvg8kILcgLdGEM03+dSNei', 'zhangsan@itcast.cn', 'USER', '0');
 
 DROP TABLE IF EXISTS `book`;
 CREATE TABLE `book`  (
-                         `id` int(32) NOT NULL AUTO_INCREMENT,
-                         `name` varchar(32),
-                         `isbn` varchar(32),
-                         `press` varchar(32),
-                         `author` varchar(32),
-                         `page_count` int(11),
-                         `price` double(10, 0),
-                         `upload_time` varchar(32),
-                         `status` varchar(1),
-                         `borrower` varchar(32),
-                         `borrow_time` varchar(32),
-                         `return_time` varchar(32),
-                         PRIMARY KEY (`id`) USING BTREE
+    `id` int(32) NOT NULL AUTO_INCREMENT,
+    `name` varchar(32),
+    `isbn` varchar(32),
+    `press` varchar(32),
+    `author` varchar(32),
+    `page_count` int(11),
+    `price` double(10, 0),
+    `upload_time` varchar(32),
+    `status` varchar(1),
+    `borrower` varchar(32),
+    `borrow_time` varchar(32),
+    `return_time` varchar(32),
+    PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 
 INSERT INTO `book` VALUES (1, 'Java基础案例教程（第2版）', '9787115547477', '人民邮电出版社', '传智播客', 291, 59, '2020-12-11', '0', NULL, NULL, NULL);
@@ -47,14 +48,16 @@ INSERT INTO `book` VALUES (13, '沉默的巡游', '9787544280662', '南海出版
 
 DROP TABLE IF EXISTS `record`;
 CREATE TABLE `record`  (
-                           `id` int(32) NOT NULL AUTO_INCREMENT,
-                           `book_name` varchar(32),
-                           `book_isbn` varchar(32),
-                           `borrower` varchar(32),
-                           `borrow_time` varchar(32),
-                           `return_time` varchar(32),
-                           PRIMARY KEY (`id`) USING BTREE
+    `id` int(32) NOT NULL AUTO_INCREMENT,
+    `book_name` varchar(32),
+    `book_isbn` varchar(32),
+    `borrower` varchar(32),
+    `borrow_time` varchar(32),
+    `return_time` varchar(32),
+    PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 25 CHARACTER SET = utf8 COLLATE = utf8_general_ci;
 
 INSERT INTO `record` VALUES (23, 'Java基础案例教程（第2版）', '9787115547477', '张三', '2020-12-21', '2020-12-21');
 INSERT INTO `record` VALUES (24, '沉默的巡游', '9787544280662', '张三', '2020-12-11', '2021-01-06');
+
+

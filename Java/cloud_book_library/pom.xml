@@ -5,9 +5,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.gy</groupId>
-  <artifactId>cloud_book_library</artifactId>
+  <artifactId>cloud-book-library</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>cloud_book_library</name>
+  <name>cloud-book-library</name>
   <packaging>war</packaging>
 
   <properties>
@@ -93,12 +93,14 @@
           <artifactId>spring-jdbc</artifactId>
           <version>${spring.version}</version>
       </dependency>
+
       <!-- Jakarta Bean Validation的实现 -->
       <dependency>
           <groupId>org.hibernate.validator</groupId>
           <artifactId>hibernate-validator</artifactId>
           <version>8.0.0.Final</version>
       </dependency>
+
       <!-- MyBatis -->
       <dependency>
           <groupId>org.mybatis</groupId>
@@ -113,11 +115,18 @@
           <version>3.0.3</version>
       </dependency>
 
+      <!-- MyBatis实现分页查询：https://pagehelper.github.io/ -->
+      <dependency>
+          <groupId>com.github.pagehelper</groupId>
+          <artifactId>pagehelper</artifactId>
+          <version>6.1.0</version>
+      </dependency>
+
       <!-- MySql驱动依赖 -->
       <dependency>
-          <groupId>mysql</groupId>
-          <artifactId>mysql-connector-java</artifactId>
-          <version>8.0.33</version>
+          <groupId>com.mysql</groupId>
+          <artifactId>mysql-connector-j</artifactId>
+          <version>8.4.0</version>
       </dependency>
 
       <!-- dbcp连接池依赖 -->
@@ -125,6 +134,13 @@
           <groupId>org.apache.commons</groupId>
           <artifactId>commons-dbcp2</artifactId>
           <version>2.12.0</version>
+      </dependency>
+
+      <!-- jasypt 加密库 -->
+      <dependency>
+          <groupId>org.jasypt</groupId>
+          <artifactId>jasypt</artifactId>
+          <version>1.9.3</version>
       </dependency>
 
       <dependency>
@@ -145,14 +161,6 @@
           <groupId>com.fasterxml.jackson.core</groupId>
           <artifactId>jackson-databind</artifactId>
           <version>2.14.2</version>
-      </dependency>
-
-      <!-- PDF -->
-      <!-- https://github.com/LibrePDF/OpenPDF -->
-      <dependency>
-          <groupId>com.github.librepdf</groupId>
-          <artifactId>openpdf</artifactId>
-          <version>2.0.2</version>
       </dependency>
 
       <dependency>

@@ -1,16 +1,20 @@
 {
   "folders": [
     {
-      "path": "."
+      "path": "demo"
     },
     {
-      "path": "spring-mvc-authentication"
-    },
-    {
-      "path": "cloud_book_library"
+      "path": "data_visualization"
     }
   ],
   "settings": {
-    "java.compile.nullAnalysis.mode": "automatic"
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable",
+    "commentTranslate.targetLanguage": "zh-CN",
+    "commentTranslate.source": "Bing",
+    "files.watcherExclude": {
+      "**/target": true
+    }
   }
 }
