@@ -1,1 +1,0 @@
-在深层的for循环中，可以用contiune语句来代替if嵌套，if的执行顺序是从上往下筛选，而在if中包含continue，可以省略else，将逻辑移出来

@@ -1,8 +1,0 @@
-[
-{
-  "directory": "D:/OneDrive/Code/C++/opengl/1.2.hello_window_clear/build",
-  "command": "F:\\MinGW-W64\\13.2.0-rev3\\bin\\g++.exe  @CMakeFiles/HelloWindow.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\HelloWindow.dir\\hello_window.cpp.obj -c D:\\OneDrive\\Code\\C++\\opengl\\1.2.hello_window_clear\\hello_window.cpp",
-  "file": "D:/OneDrive/Code/C++/opengl/1.2.hello_window_clear/hello_window.cpp",
-  "output": "CMakeFiles/HelloWindow.dir/hello_window.cpp.obj"
-}
-]

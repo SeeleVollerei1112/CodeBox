@@ -7,5 +7,7 @@
       "path": "React/my-app"
     }
   ],
-  "settings": {}
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "quick-start"
+  }
 }

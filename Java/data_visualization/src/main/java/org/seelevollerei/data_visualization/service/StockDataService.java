@@ -2,6 +2,7 @@ package org.seelevollerei.data_visualization.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestClient;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import reactor.core.publisher.Mono;
@@ -11,6 +12,8 @@ public class StockDataService {
 
     @Autowired
     private WebClient webClient;
+
+    private RestClient restClient;
 
     public Mono<String> fetchStockData(String stockCode) {
         return webClient.get()

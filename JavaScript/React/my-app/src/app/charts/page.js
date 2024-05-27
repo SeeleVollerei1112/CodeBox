@@ -1,7 +1,5 @@
 "use client";  //声明使用客户端模式
 
-// pages/index.js
-
 import RevenueChart from '../components/RevenueChart';
 
 const HomePage = () => {

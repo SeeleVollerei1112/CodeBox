@@ -1,3 +1,0 @@
-F:\MinGW-W64\13.2.0-rev3\bin\cmake.exe -E rm -f CMakeFiles\HelloWindow.dir/objects.a
-F:\MinGW-W64\13.2.0-rev3\bin\ar.exe qc CMakeFiles\HelloWindow.dir/objects.a @CMakeFiles\HelloWindow.dir\objects1.rsp
-F:\MinGW-W64\13.2.0-rev3\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\HelloWindow.dir/objects.a -Wl,--no-whole-archive -o HelloWindow.exe -Wl,--out-implib,libHelloWindow.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\HelloWindow.dir\linkLibs.rsp

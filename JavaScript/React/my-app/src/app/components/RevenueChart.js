@@ -28,9 +28,11 @@ const RevenueChart = () => {
 
         const chart = echarts.init(chartRef.current);
 
+        const colors = ['#5470C6', '#91CC75', '#EE6666'];
+
         const option = {
             title: {
-                text: '腾讯控股营收趋势图-单季度',
+                text: chartData.title,
             },
             tooltip: {
                 trigger: 'axis',
@@ -50,7 +52,7 @@ const RevenueChart = () => {
                 },
             },
             legend: {
-                data: ['营业收入', '营收同比'],
+                data: ['收入', '扣归母净利润', '扣归母净利润率'],
             },
             xAxis: [
                 {
@@ -68,19 +70,19 @@ const RevenueChart = () => {
             yAxis: [
                 {
                     type: 'value',
-                    name: '营业收入',
-                    min: 1200,
-                    max: 1650,
-                    interval: 50,
+                    name: 'chart.yAxis.name_left',
+                    min: 0,
+                    max: 1800,
+                    interval: 200,
                     axisLabel: {
                         formatter: '{value}',
                     },
                 },
                 {
                     type: 'value',
-                    name: '营收同比',
+                    name: 'chartData.yAxis.name_right',
                     min: -5,
-                    max: 25,
+                    max: 50,
                     interval: 5,
                     axisLabel: {
                         formatter: '{value} %',
@@ -92,15 +94,25 @@ const RevenueChart = () => {
             ],
             series: [
                 {
-                    name: '营业收入',
+                    name: '收入',
                     type: 'bar',
-                    data: chartData.series.revenue,
-                    itemStyle: {
-                        color: 'rgba(60,160,255,0.8)', // 设置柱状图颜色
-                    },
+                    data: chartData.series.s1,
+                    yAxisIndex: 0,
+                    // itemStyle: {
+                    //     color: '#5470C6', // 设置柱状图颜色
+                    // },
                 },
                 {
-                    name: '营收同比',
+                    name: '扣归母净利润',
+                    type: 'bar',
+                    data: chartData.series.s2,
+                    yAxisIndex: 0,
+                    // itemStyle: {
+                    //     color: '#91CC75', // 设置柱状图颜色
+                    // },
+                },
+                {
+                    name: '扣归母净利润率',
                     type: 'line',
                     yAxisIndex: 1,
                     tooltip: {
@@ -108,13 +120,10 @@ const RevenueChart = () => {
                             return value + ' %';
                         },
                     },
-                    data: chartData.series.growth,
-                    lineStyle: {
-                        color: '#a6e22e', // 设置折线图颜色
-                    },
-                    itemStyle: {
-                        color: '#a6e22e', // 设置折线图数据点颜色
-                    },
+                    data: chartData.series.s3,
+                    // lineStyle: {
+                    //     color: '#EE6666', // 设置折线图颜色
+                    // },
                 },
             ],
             grid: {
@@ -124,6 +133,7 @@ const RevenueChart = () => {
                 containLabel: true,
             },
         };
+
 
         chart.setOption(option);
 

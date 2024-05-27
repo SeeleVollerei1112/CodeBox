@@ -15,6 +15,7 @@
     "commentTranslate.source": "Bing",
     "files.watcherExclude": {
       "**/target": true
-    }
+    },
+    "commentTranslate.hover.enabled": true
   }
 }
