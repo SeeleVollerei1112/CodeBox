@@ -1,0 +1,9 @@
+/home/seele_vollerei/Code/Java/spring-mvc-authentication/src/main/java/com/gy/springmvcdemo/controller/UserController.java
+/home/seele_vollerei/Code/Java/spring-mvc-authentication/src/main/java/com/gy/springmvcdemo/config/AppConfig.java
+/home/seele_vollerei/Code/Java/spring-mvc-authentication/src/main/java/com/gy/springmvcdemo/config/WebMvcConfig.java
+/home/seele_vollerei/Code/Java/spring-mvc-authentication/src/main/java/com/gy/springmvcdemo/dto/AvatarDto.java
+/home/seele_vollerei/Code/Java/spring-mvc-authentication/src/main/java/com/gy/springmvcdemo/config/SpringWebAppInitializer.java
+/home/seele_vollerei/Code/Java/spring-mvc-authentication/src/main/java/com/gy/springmvcdemo/controller/LoginController.java
+/home/seele_vollerei/Code/Java/spring-mvc-authentication/src/main/java/com/gy/springmvcdemo/entity/User.java
+/home/seele_vollerei/Code/Java/spring-mvc-authentication/src/main/java/com/gy/springmvcdemo/controller/LogoutController.java
+/home/seele_vollerei/Code/Java/spring-mvc-authentication/src/main/java/com/gy/springmvcdemo/interceptor/AuthenticationInterceptor.java

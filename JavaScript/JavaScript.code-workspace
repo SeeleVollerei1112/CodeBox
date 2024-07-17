@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "React/quick-start"
+    },
+    {
+      "path": "React/my-app"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "quick-start"
+  }
+}
